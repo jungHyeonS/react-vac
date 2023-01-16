@@ -1,46 +1,22 @@
-# Getting Started with Create React App
+# VAC Patten Study
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## VAC 패턴
+View Asset Component의 약자로 렌더링에 필요한 JSX와 스타일을 관리하는 컴포넌트를 의미합니다<br/>
+VAC패턴은 View 컴포넌트에서 JSX영역을 Props Object로 추상화 하고 JSX를 VAC로 분리해서 개발을 진행합니다
 
-## Available Scripts
+### VAC 패턴 특징
+1. 반복이나 조건부노출, 스타일 제어와 같은 렌더링과 관련된 처리만 수행합니다
+2. props를 통해서만 제어가 되고 상태를 관리하거나 변경하지 않는 컴포넌트입니다
+3. 이벤트에 함수를 바인딩할때 어떠한 추가처리도 하지 않습니다
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Persentational 패턴과의 차이
+<b>Persentational 패턴</b><br/>
+1. 비즈니스 로직과 View의 관심사 분리가 목적 입니다<br/>
+2. Container 컴포넌트에서 비지니스 로직을 관리하고 Persentational 컴포넌트를 제어 합니다<br/>
+3. Presentational 컴포넌트는 VIEW로직(UI기능,상태관리등) 과 렌더링을 담당합니다<br/>
+<br/>
+<br/>
+<b>VAC 패턴</b><br/>
+1. View 로직(UI 기능, 상태 관리) 과 렌더링(JSX)의 관심사 분리가 목적입니다<br/>
+2. View 컴포넌트가 VAC의 Container 컴포넌트 역할을 하며 JSX를 추상화환 Props Object를 관리하여 VAC를 제어합니다<br/>
+3. VAC는 JSX,style을 관리하여 렌더링을 처리합니다
